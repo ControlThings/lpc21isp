@@ -120,6 +120,15 @@ static const unsigned int SectorTable_8xx[] =
      1024,  1024,  1024,  1024,  1024,  1024,  1024,  1024
 };
 
+// Used for LPC11E6x / LPC11U6x devices
+static const unsigned int SectorTable_11E6x[] =
+{
+      4096,  4096,  4096,  4096,  4096,  4096,  4096,  4096,
+      4096,  4096,  4096,  4096,  4096,  4096,  4096,  4096,
+      4096,  4096,  4096,  4096,  4096,  4096,  4096,  4096,
+      32768, 32768, 32768, 32768, 32768
+};
+
 static int unsigned SectorTable_RAM[]  = { 65000 };
 
 static LPC_DEVICE_TYPE LPCtypes[] =
@@ -189,6 +198,7 @@ static LPC_DEVICE_TYPE LPCtypes[] =
    { 0x00009C41, 0x00000000, 0, "11E36(FBD64,FHN33)/501",         96,  12, 24, 4096, SectorTable_11xx, CHIP_VARIANT_LPC11XX }, /* From UM10518 Rev. 3 -- 25 Nov 2013 */
    { 0x00007C45, 0x00000000, 0, "11E37HFBD64/401",               128,  10, 32, 4096, SectorTable_11xx, CHIP_VARIANT_LPC11XX }, /* From UM10518 Rev. 3 -- 25 Nov 2013 */
    { 0x00007C41, 0x00000000, 0, "11E37(FBD48,FBD64)/501",        128,  12, 32, 4096, SectorTable_11xx, CHIP_VARIANT_LPC11XX }, /* From UM10518 Rev. 3 -- 25 Nov 2013 */
+   { 0x0000BC81, 0x00000000, 0, "11E67(FBD48,FBD64)",            128,  16, 25, 4096, SectorTable_11E6x, CHIP_VARIANT_LPC11XX }, /* From UM10732 Rev. 1.3  -- 19  may 2014 */ 
 
    { 0x095C802B, 0x00000000, 0, "11U12(FHN33,FBD48)/201",         16,   6,  4, 4096, SectorTable_11xx, CHIP_VARIANT_LPC11XX }, /* From UM10462 Rev. 5 -- 20 Nov 2013 */
    { 0x295C802B, 0x00000000, 0, "11U12(FHN33,FBD48)/201",         16,   6,  4, 4096, SectorTable_11xx, CHIP_VARIANT_LPC11XX }, /* From UM10462 Rev. 5 -- 20 Nov 2013 */

@@ -44,3 +44,10 @@ To compile with gcc (linux, cygwin, ...)
   make -f Makefile.gnu clean all
 - Run (if you want to use gmake and gcc)
   gmake -f Makefile.gnu clean all
+
+To cross-compile for a Windows executable on a Linux host:
+Edit the Makefile, replace 
+
+CC=i686-w64-mingw32-gcc make
+
+Note, you will need to rename the resulting executable to lpc21isp.exe
